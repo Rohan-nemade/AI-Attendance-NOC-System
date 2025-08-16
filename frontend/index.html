@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Attendance & NOC System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Assignment Uplode & Similarity Check</h1>
+
+        <form id="uploadForm">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required />
+
+            <label for="rollNumber">Roll Number:</label>
+            <input type="text" id="rollNumber" name="rollNumber" required />
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required />
+            
+            <label for="assignmentFile">Uplode Assignment(POF/DOCX):</label>
+            <input type="file" id="assignmentFile" name="assignmentFile" accept=".pdf,.docx" required />
+
+            <button type="submit">Uplode & Check Similarity</button>
+        </form>
+
+        <div id="results" class="hidden">
+            <h2>Similarity Results</h2>
+            <ul id="similarityList"></ul>
+        </div>
+
+        <hr/>
+
+        <div id="nocStatus">
+            <h2>Mark NOC Status</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Roll No</th>
+                        <th>SCE</th>
+                        <th>CIE</th>
+                        <th>HA</th>
+                        <th>Submit</th>
+                    </tr>
+                </thead>
+                <tbody id="nocTableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
